@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: nginx   # This is where ArgoCD is deployed
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/safiUllahRai/argocd.git'
+    targetRevision: master
+    path: dev/nginx-app   # Points to the overlay directory that contains kustomization.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

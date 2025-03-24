@@ -1,0 +1,4 @@
+replicaCount: 2
+image:
+  tag: stable
+message: "Hi Shyshtem from DEV"
