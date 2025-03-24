@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/safiUllahRai/argocd.git'
     targetRevision: master
-    path: dev/nginx-app   # Points to the overlay directory that contains kustomization.yaml
+    path: dev/nginx-app  # Points to the overlay directory that contains kustomization.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: nginx
