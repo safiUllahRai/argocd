@@ -9,6 +9,8 @@ spec:
     repoURL: 'https://github.com/safiUllahRai/argocd.git'
     targetRevision: master
     path: dev/nginx-app  # Points to the overlay directory that contains kustomization.yaml
+    kustomize:
+      buildOptions: "--enable-helm"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: nginx
