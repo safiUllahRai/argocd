@@ -4,6 +4,6 @@ resources:
   - namespace.yaml
 helmCharts:
   - name: nginx-app
-    path: ../../charts/nginx-app
+    chartPath: ../../charts/nginx-app
     releaseName: nginx-app
     valuesFile: values.yaml
